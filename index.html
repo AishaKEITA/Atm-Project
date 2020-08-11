@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM project</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Hello, Welcome to your ATM logIn page!</h1>
+    <div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Type name">
+    </div>
+
+    <div>
+        <label for="pass">PIN:</label>
+        <input type="text" id="pass" name="password" placeholder="Type password" required>
+    </div>
+    <button id="btn">LogIn</button>
+    </div>
+
+    <div>Currently logged in as:<p id="loggedinuser">none</p></div>
+    <div><button id="balance">Print Balance</button></div>
+    <div><button id="withdraw">Withdraw here!</button></div>
+    <div><button id="deposit">Deposit here!</button></div>
+    <script src="index.js"></script>
+</body>
+
+</html>
