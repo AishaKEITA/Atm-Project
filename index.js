@@ -1,12 +1,11 @@
-/* 1. make an array of objects of users
-2. each user has name, pincod, 
-3. 3 headings choose to take money or see how much balance left, or add money 
-
+/* 
 1. pin verification (block the card) 
 2. Print balance 
 3. withdrawal (with limits and not being able to do with 0 balance) 
 4. Cash in*/
+
 let foundUser = null;
+let loggedInUser = null;
 let users = [
     {
         name: "Sandra",
@@ -23,9 +22,10 @@ let users = [
     {
         name: "Buba",
         pincode: 2500,
-        amount: 15000
-    }];
+        amount: 15000,
 
+    }];
+let loginAttempts = 3;
 function validationForm() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("pass").value;
@@ -34,6 +34,12 @@ function validationForm() {
         if (username == users[i].name && password == users[i].pincode) {
             foundUser = users[i];
             break;
+        }
+
+        else {
+            loginAttempts--;
+            alert("You have left " + loginAttempts + " loginAttempts");
+            return;
         }
     }
 
@@ -49,7 +55,7 @@ function validationForm() {
 }
 
 function printBalance() {
-    if(!loggedInUser) {
+    if (!loggedInUser) {
         alert("You need to log in first!");
         return;
     }
@@ -57,12 +63,12 @@ function printBalance() {
     alert(`${loggedInUser.name} this is your balance: ${loggedInUser.amount}`);
 }
 function withdraw() {
-    if(!loggedInUser) {
+    if (!loggedInUser) {
         alert("You need to log in first!");
         return;
     }
 
-    let amount = +prompt("Enter amount");
+    let amount = +prompt("How much do you want to withdraw ?");
     if (loggedInUser.amount >= amount) {
         loggedInUser.amount -= amount;
     } else {
@@ -71,13 +77,13 @@ function withdraw() {
 }
 
 function deposit() {
-    if(!loggedInUser) {
+    if (!loggedInUser) {
         alert("You need to log in first!");
         return;
     }
 
-    let amount = +prompt("Enter amount");
-    loggedInUser.amount += amount; 
+    let amount = +prompt("How much do you want to deposit?");
+    loggedInUser.amount += amount;
 }
 
 document.getElementById("btn").addEventListener("click", validationForm);
@@ -85,4 +91,4 @@ document.getElementById("balance").addEventListener("click", printBalance);
 document.getElementById("withdraw").addEventListener("click", withdraw);
 document.getElementById("deposit").addEventListener("click", deposit);
 
-let loggedInUser = null;
+

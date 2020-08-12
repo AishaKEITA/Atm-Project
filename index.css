@@ -14,25 +14,49 @@ h1 {
     font-size: 30px;
     width: 90%;
     padding: 3%;
+    color: #4f4f4f;
 }
 
 label {
     display: block;
     font: .9rem 'Fira Sans', sans-serif;
     align-items: center;
-    padding: 2%;
+    /* padding: 2%; */
 }
 
-input[type='text']
-label {
-    margin-top: 1rem;
-    background-color: #888;
+input[type='text'],
+label[for='pass'], label[for='username']{
+    padding: 5px;
+    color: #4f4f4f;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 4px 2px;
+}
+input {
+    font-size: 16px;
+    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+    border: 1px solid #e5a900;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.userpass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #btn {
-    background-color: lightskyblue;
     cursor: pointer;
-    color: white;
+    color: #4f4f4f;
+    box-sizing: border-box;
+    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+    border: 1px solid #e5a900;
+    border-radius: 5px;
+    margin: 4px 2px;
+    padding: 5px;
 }
 
 .loggedinwrap {
@@ -41,7 +65,39 @@ label {
     color: #852;
 }
 
+#balance {
+    cursor: pointer;
+    color: #4f4f4f;
+    box-sizing: border-box;
+    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+    border: 1px solid #e5a900;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#deposit {
+    cursor: pointer;
+    color: #4f4f4f;
+    box-sizing: border-box;
+    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+    border: 1px solid #e5a900;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#withdraw{
+    cursor: pointer;
+    color: #4f4f4f;
+    box-sizing: border-box;
+    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+    border: 1px solid #e5a900;
+    border-radius: 5px;
+    font-size: 14px;
+}
 .btnwrap {
     display: flex;
     justify-content: space-evenly;
+    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+    border: 1px solid #e5a900;
+    padding: 1%;
 }
