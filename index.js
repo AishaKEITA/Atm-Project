@@ -25,10 +25,11 @@ let users = [
         amount: 15000,
 
     }];
+    
 let loginAttempts = 3;
 function validationForm() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("pass").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("pass").value;
 
     for (let i = 0; i < users.length; i++) {
         if (username == users[i].name && password == users[i].pincode) {
