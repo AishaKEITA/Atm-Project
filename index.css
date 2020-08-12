@@ -3,17 +3,36 @@ body {
     margin: auto 0;
     padding: 3%;
 }
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
 label {
     display: block;
     font: .9rem 'Fira Sans', sans-serif;
 }
 
-input[type='submit'],
-label {
+input[type='text']
+{
     margin-top: 1rem;
+    background-color: #888;
 }
+
 #btn {
     background-color: lightskyblue;
     cursor: pointer;
     color: white;
+}
+
+.loggedinwrap {
+    display: flex;
+    justify-content: space-evenly;
+    color: #852;
+}
+
+.btnwrap {
+    display: flex;
+    justify-content: space-evenly;
 }
