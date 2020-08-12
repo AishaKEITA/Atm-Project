@@ -78,7 +78,6 @@ function deposit() {
 
     let amount = +prompt("Enter amount");
     loggedInUser.amount += amount; 
-    // loggedInUser.amount = loggedInUser.amount + amount;   
 }
 
 document.getElementById("btn").addEventListener("click", validationForm);

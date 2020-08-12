@@ -11,28 +11,28 @@
 <body>
     <main>
         <h1>Hello, Login to your ATM page!</h1>
-    <div>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Type name">
+        <div class="userpass">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Type name">
+            </div>
+
+            <div>
+                <label for="pass">PIN:</label>
+                <input type="text" id="pass" name="password" placeholder="Type password" required>
+            </div>
+            <button id="btn">LogIn</button>
         </div>
 
-        <div>
-            <label for="pass">PIN:</label>
-            <input type="text" id="pass" name="password" placeholder="Type password" required>
+        <div class="loggedinwrap">
+            <p>Currently logged in as:</p>
+            <p id="loggedinuser">User:(None)</p>
         </div>
-        <button id="btn">LogIn</button>
-    </div>
-
-    <div class="loggedinwrap">
-        <p>Currently logged in as:</p>
-        <p id="loggedinuser">User:(None)</p>
-    </div>
-    <div class="btnwrap">
-        <div><button id="balance">Print Balance</button></div>
-        <div><button id="withdraw">Withdraw here!</button></div>
-        <div><button id="deposit">Deposit here!</button></div>
-    </div>
+        <div class="btnwrap">
+            <div><button id="balance">Print Balance</button></div>
+            <div><button id="withdraw">Withdraw here!</button></div>
+            <div><button id="deposit">Deposit here!</button></div>
+        </div>
     </main>
     <script src="index.js"></script>
 </body>

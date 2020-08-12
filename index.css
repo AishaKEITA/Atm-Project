@@ -12,15 +12,19 @@ main {
 h1 {
     text-align: center;
     font-size: 30px;
+    width: 90%;
+    padding: 3%;
 }
 
 label {
     display: block;
     font: .9rem 'Fira Sans', sans-serif;
+    align-items: center;
+    padding: 2%;
 }
 
 input[type='text']
-{
+label {
     margin-top: 1rem;
     background-color: #888;
 }
