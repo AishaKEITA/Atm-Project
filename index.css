@@ -2,6 +2,11 @@ body {
     background-color: lightsteelblue;
     margin: auto 0;
     padding: 3%;
+    height: auto;
+}
+main {
+    background-color: #FDA;
+    margin: 1%;
 }
 
 h1 {
